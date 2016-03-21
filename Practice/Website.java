@@ -10,27 +10,22 @@ import java.net.URL;
  */
 public class Website
 {
-    String address;
-    URL pageLocation;
+    
     public static void main(String[] args)
+        throws Exception
     {
-        address = new String("http://google.com");
-        try
-        {
+        String address = "http://google.com";
 
-            this.pageLocation = new URL(this.address);
-        }
-        catch (Exception e)
-        {
-            System.out.println("You messed up");
-        }
-        try
-        {
-            Scanner in = new Scanner(pageLocation.openStream());
-        }
-        catch (Exception e)
-        {
-            System.out.println("you messed up");
-        }
+        URL pageLocation = new URL(address);
+
+        
+
+
+        Scanner in = new Scanner(pageLocation.openStream());
+
+        
+
+        System.out.println(in.readLine());
+
     }
 }

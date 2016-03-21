@@ -49,7 +49,7 @@ public class Fractal extends JPanel
         int blue = random.nextInt(254) + 1;
         Line2D.Double nextLine  = new Line2D.Double(x,y,x2,y2);
         g2.setColor(new Color(red, green, blue));
-        g2.setStroke(new BasicStroke(30));
+        g2.setStroke(new BasicStroke(5));
         g2.draw(nextLine);
         if (length<1)
         {
@@ -57,8 +57,8 @@ public class Fractal extends JPanel
         }
         else
         {
-            drawFractal(500,100,angle1+angle1+50, length - 10, g2);
-            
+            drawFractal(x2,y2,angle1+angle1+50, length - 5, g2);
+            drawFractal(x2,y2,angle1+angle1+50, length - 5, g2);
         }
     }
 
