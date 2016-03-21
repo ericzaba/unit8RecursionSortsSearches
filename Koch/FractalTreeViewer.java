@@ -28,7 +28,7 @@ public class FractalTreeViewer
         
 
 
-        drawing = new Fractal (1);
+        drawing = new Fractal ();
         panel = new JPanel();
         
         panel.add (drawing);
