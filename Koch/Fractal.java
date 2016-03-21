@@ -56,7 +56,7 @@ public class Fractal extends JPanel
         }
         else
         {
-            drawFractal(500,100,angle1+angle1+10, length - 10, g2);
+            drawFractal(500,100,angle1+angle1+50, length - 10, g2);
             
         }
     }
@@ -70,7 +70,7 @@ public class Fractal extends JPanel
         
         super.paintComponent( g );
         Graphics2D g2 = (Graphics2D) g;
-        drawFractal(100, 100, 30, 10, g2);
+        drawFractal(100, 100, 900, 50, g2);
         System.out.println("drawFractal Called: "+ i + "times");
     }
 }
