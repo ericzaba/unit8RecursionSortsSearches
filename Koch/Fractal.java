@@ -49,6 +49,7 @@ public class Fractal extends JPanel
         int blue = random.nextInt(254) + 1;
         Line2D.Double nextLine  = new Line2D.Double(x,y,x2,y2);
         g2.setColor(new Color(red, green, blue));
+        g2.setStroke(new BasicStroke(30));
         g2.draw(nextLine);
         if (length<1)
         {
@@ -70,7 +71,7 @@ public class Fractal extends JPanel
         
         super.paintComponent( g );
         Graphics2D g2 = (Graphics2D) g;
-        drawFractal(100, 100, 900, 50, g2);
+        drawFractal(100, 100, 900, 100, g2);
         System.out.println("drawFractal Called: "+ i + "times");
     }
 }
