@@ -56,13 +56,7 @@ public class Fractal extends JPanel
         else
         {
             drawFractal(x2,y2,angle1+angle1+50, length - 2, g2);
-            try
-            {
-                Thread.sleep(250);
-            }
-            catch (Exception e)
-            {
-            }
+            
             //drawFractal(x,y,angle1+angle1+50, length - 5, g2);
         }
     }
