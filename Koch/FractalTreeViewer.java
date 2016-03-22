@@ -8,7 +8,7 @@ public class FractalTreeViewer
     private final int WIDTH = 1000;
     private final int HEIGHT = 1000;
 
-    private final int MIN = 1, MAX = 13;
+    
 
     private JLabel titleLabel, orderLabel;
     private Fractal drawing;
