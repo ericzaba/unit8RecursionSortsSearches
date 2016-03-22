@@ -5,8 +5,8 @@ import javax.swing.*;
 
 public class FractalTreeViewer
 {
-    private final int WIDTH = 400;
-    private final int HEIGHT = 500;
+    private final int WIDTH = 1000;
+    private final int HEIGHT = 1000;
 
     private final int MIN = 1, MAX = 13;
 

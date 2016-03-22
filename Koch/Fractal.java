@@ -18,7 +18,6 @@ public class Fractal extends JPanel
 
     private int i = 0;
 
-   
     //-----------------------------------------------------------------
     //  Sets the initial fractal order to the value specified.
     //-----------------------------------------------------------------
@@ -42,14 +41,13 @@ public class Fractal extends JPanel
         double radAngle = Math.toRadians(angle1);
         double x2 = x - length * Math.sin(radAngle);
         double y2 = y - length * Math.cos(radAngle);
-        
 
-        int red = random.nextInt(254) + 1;
-        int green = random.nextInt(254) + 1;
-        int blue = random.nextInt(254) + 1;
+        int red = 254;
+        int green = 2;
+        int blue = 254;
         Line2D.Double nextLine  = new Line2D.Double(x,y,x2,y2);
         g2.setColor(new Color(red, green, blue));
-        g2.setStroke(new BasicStroke(5));
+        g2.setStroke(new BasicStroke(1));
         g2.draw(nextLine);
         if (length<1)
         {
@@ -57,8 +55,15 @@ public class Fractal extends JPanel
         }
         else
         {
-            drawFractal(x2,y2,angle1+angle1+50, length - 5, g2);
-            drawFractal(x2,y2,angle1+angle1+50, length - 5, g2);
+            drawFractal(x2,y2,angle1+angle1+50, length - 2, g2);
+            try
+            {
+                Thread.sleep(250);
+            }
+            catch (Exception e)
+            {
+            }
+            //drawFractal(x,y,angle1+angle1+50, length - 5, g2);
         }
     }
 
@@ -68,10 +73,10 @@ public class Fractal extends JPanel
     public void paintComponent(Graphics g)
     {
         this.i++;
-        
+
         super.paintComponent( g );
         Graphics2D g2 = (Graphics2D) g;
-        drawFractal(100, 100, 900, 100, g2);
+        drawFractal(100, 100, 600, 200, g2);
         System.out.println("drawFractal Called: "+ i + "times");
     }
 }
