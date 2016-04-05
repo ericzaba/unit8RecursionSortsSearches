@@ -30,6 +30,16 @@ public class SelectionSorter
         }
         return minPos;
     }
+    
+    private static int minimumPosition(int[] a, int from)
+
+    {
+        int minPos = from;
+        for (int i = 0; i< 
+    }
+    
+    
+    
     public static void main( String[] args)
     {
         int[] a = ArrayUtil.randomIntArray(20, 100);
