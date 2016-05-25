@@ -38,26 +38,41 @@ public class Fractal extends JPanel
     {
 
         Random random = new Random();
-        double radAngle = Math.toRadians(angle1);
-        double x2 = x - length * Math.sin(radAngle);
-        double y2 = y - length * Math.cos(radAngle);
+        double radianAngle = (Math.toRadians(angle1));
+        double x2 = x - (Math.sin(radianAngle) * length);
+        double y2 = y - (Math.cos(radianAngle) * length);
 
+<<<<<<< HEAD
         int red = 254;
         int green = 254;
         int blue = 254;
+=======
+        
+>>>>>>> origin/master
         Line2D.Double nextLine  = new Line2D.Double(x,y,x2,y2);
-        g2.setColor(new Color(red, green, blue));
+
+
+        
         g2.setStroke(new BasicStroke(1));
         g2.draw(nextLine);
-        if (length<1)
+        if (length<50)
         {
             return;
         }
         else
         {
+<<<<<<< HEAD
             drawFractal(x2,y2,angle1+50, length - 2, g2);
             
             drawFractal(x2, y2, angle1-50, length - 2, g2);
+=======
+            //g2.setColor(Color.red);
+
+            drawFractal(x2, y2, angle1 + 30, length * 0.9, g2);
+            
+            drawFractal(x2, y2, angle1 - 30, length * 0.9, g2);
+            
+>>>>>>> origin/master
         }
     }
 
@@ -66,11 +81,16 @@ public class Fractal extends JPanel
     //-----------------------------------------------------------------
     public void paintComponent(Graphics g)
     {
-        this.i++;
+        
 
         super.paintComponent( g );
         Graphics2D g2 = (Graphics2D) g;
+<<<<<<< HEAD
         drawFractal(500, 500, -30, 15, g2);
         System.out.println("drawFractal Called: "+ i + "times");
+=======
+        drawFractal(500, 1000, 0, 100, g2);
+        
+>>>>>>> origin/master
     }
 }
